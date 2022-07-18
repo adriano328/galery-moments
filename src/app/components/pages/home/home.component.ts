@@ -12,10 +12,15 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 })
 export class HomeComponent implements OnInit {
 
+  value = '';
+  toLowerCase = '';
 
   allMoments: IMoment[] = []
   moments: IMoment[] = []
   baseApiUrl = environment.baseApiUrl;
+
+  faSearch = faSearch;
+  searchTerm: string = '';
 
   constructor(
     private momentService: MomentService,
@@ -34,4 +39,24 @@ export class HomeComponent implements OnInit {
     } )
   }
 
-}
+  search(e: Event): void{
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    console.log(target.value);
+    
+    this.moments = this.allMoments.filter((moment) => {
+     return moment.title.toLowerCase().includes(value);
+    });
+
+    
+   } 
+
+   
+
+   ;
+    
+    };
+  
+
+

@@ -65,3 +65,44 @@ input[type="submit"]:hover{
     border-left: 3px solid #DC3545;
     padding-left: 0.2em;
 }
+
+
+.edit-btn,
+.remove-btn{
+    border: 1px solid #efefef;
+    padding: .4em 1em;
+    font-size: 1em;
+    margin: 0 .5em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+button fa-icon,
+a fa-icon{
+    margin-right: .2em;
+}
+
+.edit-btn,
+.edit-btn path{
+    color: #007bff;
+    border-color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path{
+    color: #fff;
+    background-color: #007bff;
+}
+
+.remove-btn,
+.remove-btn path{
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path{
+    color: #fff;
+    background-color: #dc3545;
+}
